@@ -2,7 +2,7 @@ header {
 
     display: grid;
     grid-template-columns: 1fr 3fr;
-    gap:30px;
+    gap: 30px;
 
 }
 
@@ -12,7 +12,7 @@ nav {
 }
 
 nav ul li {
-   
+
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -48,8 +48,10 @@ nav ul li a:hover {
 
 h1 {
 
-    text-align: center;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
 }
 
 p {
@@ -58,8 +60,33 @@ p {
 
 }
 
-table, th, td {
+body {
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: lightgray;
+
+}
+
+main {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+
+}
+
+table,
+th,
+td {
     border: 1px black;
+    font-size: 1rem;
 }
 
 td {
@@ -74,7 +101,7 @@ th {
     font-weight: bold;
     padding: 5px;
     text-align: center;
-    text-decoration-color: whitesmoke;
+    color: white;
 }
 
 tr:hover {
@@ -82,8 +109,125 @@ tr:hover {
     color: greenyellow;
 }
 
-footer p {
-    margin-top: 20px;
-    font-size: 1.1rem;
+footer {
+    margin-top: auto;
+    font-size: 1.2rem;
     color: black;
+    padding: 10px;
+}
+
+
+form input,
+form textarea,
+form button {
+
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: left;
+
+}
+
+form label {
+
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+
+}
+
+form input {
+
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 3px solid black;
+    border-radius: 4px;
+    font-size: 1rem;
+
+}
+
+form textarea {
+
+    resize: vertical;
+
+}
+
+form button {
+
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+
+}
+
+form button:hover {
+
+    background-color: greenyellow;
+    color: black;
+
+}
+
+
+@media (max-width: 589px) {
+
+    nav ul {
+
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    header {
+
+        grid-template-columns: 1fr;
+        text-align: center;
+
+    }
+
+    section {
+
+        display: block;
+
+    }
+
+    .extra {
+
+        width: 100%;
+        text-align: center;
+
+    }
+
+}
+
+@media (min-width: 590px) and (max-width: 790px) {
+
+    header {
+
+        grid-template-columns: 1fr 2fr;
+
+    }
+
+    section {
+
+        display: block;
+
+    }
+
+    .extra {
+
+        width: 100%;
+        text-align: center;
+
+    }
+
+
+
 }
